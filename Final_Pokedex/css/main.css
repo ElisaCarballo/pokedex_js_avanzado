@@ -78,37 +78,29 @@ body {
 	
 /* barra */
 .bopoke {
-	background-image: url(img/bus.png);
-	background-repeat: no-repeat;
-	background-size: 750px;
-	align-items: center;
-	width: 100%;
-	height: 100px;
-}
-
-.bopoke{
 	background-color: var(--secclaro);
 	max-height: max(200rem, 100%);
 	max-width: 100%;
-	padding: 0;
-	justify-items: center;
-}  
+	width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
 
 .buscar { /*barra blanca buscador*/
     text-decoration: none;
     border: .5px solid var(--flechas);
-    margin-left: 55%;
-    margin-top: 40px;
-    margin-bottom: 50px;
     border-radius: 1rem;
-    height: 45%;
-    width: 20%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    justify-items: flex-end;
+    height: 22px;
+    width: 305px;
     font-size: medium;
     font-family: var(--fuentePrincipal);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 1px;
 }
 
 .buscar:hover{
@@ -121,7 +113,17 @@ body {
         justify-content: space-between;
     }
 }
-.buscar_boton:hover{
+
+.botonbusc {
+    text-decoration: none;
+    width: 28px;
+    margin-top: 20px;
+    margin-bottom: -5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.botonbusc:hover{
     cursor: pointer;
 }
 
@@ -141,14 +143,6 @@ body {
     margin-right: 0px;
     margin-bottom: auto;
 }
-@media (min-width: 768px) {
-    .arrow-left-right {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto, auto, 20rem;
-        column-gap: 2rem;
-    }
-}
 
 .order{
     position: flex;
@@ -162,7 +156,7 @@ body {
     margin-top: -40px;
     margin-right: 0px;
     margin-bottom: auto;
-    font-family: var(--fuentenumber);
+    font-family: var(--fuentePrincipal);
 	color: var(--blanco);
     font-size: 24px;
     font-weight: lighter;
@@ -181,6 +175,11 @@ body {
     margin-bottom: auto;
 }
 
+@media (min-width: 768px) {
+    .arrow-left-right .order .arrow-right {
+        color: #000;
+    }
+}
 
 /*Cartas de los pokemon*/
 .pokedex__pokemon-content{
@@ -201,7 +200,7 @@ body {
 	padding: 15px;
 	text-align: center;
     width: 150px;
-    height: 230px;
+    height: 260px;
 }
 
 .pokemon:hover {
@@ -221,8 +220,8 @@ body {
 .img-container:hover { 
     background-color: var(--secundario);
     text-shadow:0 .5px .5px var(--blanco);
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 130px;
     box-shadow: 0 15px 15px rgb(255, 256, 252);
 }
 
@@ -278,30 +277,41 @@ body {
     font-size: 16px;
 }
 
-.pokemon .weight {
-	margin: 5px 0 17px;
+.pokemon .weight{
+	margin: 5px 0 0px;
 	letter-spacing: 1px;
     font-family: var(--Fuentesec);
     margin-bottom: 0px;
-    font-size: 10px;
-    font-weight: lighter;
+    font-size: 13px;
+    font-weight: bold;
     color: var(--blanco);
 }
 .weight:hover{
-    font-size: 12px;
+    font-size: 14px;
 }
 
-.pokemon .height {
-	margin: 5px 0 17px;
+.pokemon .height{
+	margin: 5px 0px;
 	letter-spacing: 1px;
     font-family: var(--Fuentesec);
     margin-bottom: 0px;
-    font-size: 10px;
-    font-weight: lighter;
+    font-size: 13px;
+    font-weight: bold;
     color: var(--blanco);
 }
 .height:hover{
     font-size: 12px;
+}
+
+.pokemon .hp .xp{
+	margin-top: 1px;
+	letter-spacing: .5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: lighter;
+}
+.hp .xp:hover{
+    font-size: 11px;
 }
 
 .modal {
@@ -310,7 +320,7 @@ body {
     left: 0;
     margin: auto;
     width: 100%;
-    height: 100vh;
+    height: 120%;
     background: rgba(0, 0, 0, 0.853);
     display: flex;
     align-items: center;

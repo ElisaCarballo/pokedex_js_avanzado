@@ -121,11 +121,9 @@ function  createPokemon(pokemon, modal){
 	const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 	const color = colors[type];
     const id = pokemon.id.toString().padStart(3, '0')
-	
+
 	pokemonEl.style.backgroundColor = color;
-
 	
-
 	if (modal !==true){
         const pokeInnerHTML = `
         <div class="img-container">
@@ -136,9 +134,10 @@ function  createPokemon(pokemon, modal){
 							.toString()
 							.padStart(3, '0')}</span>
             <h3 class="name">${name}</h3>
-            <small class="type">Tipo: <span>${type}</span></small> 
-            <h5 class="weight">Weight ${pokemon.weight/10} kg;
-            <h5 class="height">Height ${pokemon.height/10} m</h5>
+            <small class="type">Tipe: <span>${type}</span></small>
+            <h5 class="weight">Weight: ${pokemon.weight/10} kg</h5>
+            <h5 class="height">Height: ${pokemon.height/10} m</h5>
+            <h4 class="hp">Hp: ${pokemon.stats[0].base_stat}; <span class="Xp">Xp: ${pokemon.base_experience}</h4>
         </div>
     `;
         pokemonEl.innerHTML = pokeInnerHTML;
@@ -158,9 +157,10 @@ function  createPokemon(pokemon, modal){
 							.toString()
 							.padStart(3, '0')}</span>
             <h3 class="name">${name}</h3>
-            <small class="type">Tipo: <span>${type}</span></small>
-            <h5 class="weight">Weight ${pokemon.weight/10} kg;
-            <h5 class="height">Height ${pokemon.height/10} m</h5>
+            <small class="type">Tipe: <span>${type}</span></small>
+            <h5 class="weight">Weight: ${pokemon.weight/10} kg</h5>
+            <h5 class="height">Height: ${pokemon.height/10} m</h5>
+            <h4 class="hp">Hp: ${pokemon.stats[0].base_stat}; <span class="Xp">Xp: ${pokemon.base_experience}</h4>
         </div>`;
                 
 
