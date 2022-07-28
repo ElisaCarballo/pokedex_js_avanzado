@@ -185,3 +185,4 @@ function exitModal(){
     modalPokemon.style.display ='none'
     drawPokemon()
 }
+
