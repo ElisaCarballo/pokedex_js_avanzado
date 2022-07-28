@@ -134,7 +134,7 @@ function  createPokemon(pokemon, modal){
 							.toString()
 							.padStart(3, '0')}</span>
             <h3 class="name">${name}</h3>
-            <small class="type">Tipe: <span>${type}</span></small>
+            <small class="type">Type: <span>${type}</span></small>
             <h5 class="weight">Weight: ${pokemon.weight/10} kg</h5>
             <h5 class="height">Height: ${pokemon.height/10} m</h5>
             <h4 class="hp">Hp: ${pokemon.stats[0].base_stat}; <span class="Xp">Xp: ${pokemon.base_experience}</h4>
@@ -157,7 +157,7 @@ function  createPokemon(pokemon, modal){
 							.toString()
 							.padStart(3, '0')}</span>
             <h3 class="name">${name}</h3>
-            <small class="type">Tipe: <span>${type}</span></small>
+            <small class="type">Type: <span>${type}</span></small>
             <h5 class="weight">Weight: ${pokemon.weight/10} kg</h5>
             <h5 class="height">Height: ${pokemon.height/10} m</h5>
             <h4 class="hp">Hp: ${pokemon.stats[0].base_stat}; <span class="Xp">Xp: ${pokemon.base_experience}</h4>
